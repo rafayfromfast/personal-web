@@ -1,3 +1,5 @@
+@use "styles/mixins.scss" as m;
+
 .div {
   transform-style: preserve-3d;
 }
@@ -20,6 +22,18 @@ $fontSize: 7rem;
     font-family: "Anton", sans-serif;
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
+
+    @include m.mobile {
+      font-size: 40px;
+    }
+
+    @include m.from-tablet {
+      font-size: 50px;
+    }
+
+    @include m.from-laptop {
+      font-size: $fontSize;
+    }
 
     @for $i from 0 through 40 {
       $key: $i + 1;

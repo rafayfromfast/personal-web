@@ -1,0 +1,39 @@
+@use "styles/mixins.scss" as m;
+
+.container {
+  display: none;
+  height: 80px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+  width: 100%;
+  padding: 0px 40px;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  @include m.until-laptop {
+    display: flex;
+  }
+}
+
+.button-bar {
+  display: none;
+  height: 100%;
+  align-items: center;
+  flex: auto;
+  gap: 10px;
+  @include m.until-laptop {
+    display: flex;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -13,7 +13,7 @@
 
   @include m.until-laptop {
     flex-direction: column;
-    height: calc(700px + 62px);
+    height: fit-content;
   }
 }
 

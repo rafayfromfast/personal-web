@@ -10,5 +10,6 @@
   @include m.until-laptop {
     max-width: 80%;
     width: fit-content;
+    display: none;
   }
 }

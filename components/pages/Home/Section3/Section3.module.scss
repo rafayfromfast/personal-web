@@ -1,3 +1,8 @@
+@use "styles/mixins.scss" as m;
+
 .container {
   padding: 100px;
+  @include m.until-laptop {
+    padding: 20px;
+  }
 }

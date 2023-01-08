@@ -18,7 +18,19 @@ export default function Home() {
         <br />
         <br />
         <Section2 />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Section3 />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </main>
     </div>
   );

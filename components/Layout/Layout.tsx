@@ -1,3 +1,4 @@
+import { BottomBar } from "./components/BottomBar";
 import { Header } from "./components/Header";
 import styles from "./Layout.module.scss";
 
@@ -11,6 +12,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <div className={styles["overlay-left"]} />
       <div className={styles["overlay-right"]} />
       <Header />
+      <BottomBar />
       {children}
     </div>
   );

@@ -1,3 +1,5 @@
+@use "styles/mixins.scss" as m;
+
 .container {
   width: 100vw;
 
@@ -69,6 +71,14 @@ $delay_time: 1s;
 
   z-index: 2;
   margin: 0;
+
+  @include m.mobile {
+    font-size: 20px;
+  }
+
+  @include m.until-laptop {
+    font-size: 30px;
+  }
 }
 
 %main-heading-common {

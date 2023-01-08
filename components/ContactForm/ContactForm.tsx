@@ -41,6 +41,7 @@ const ContactForm: React.FC = () => {
               type={ButtonTypes.CONTAINED}
               title={"Submit"}
               rounded={true}
+              className={styles.btn}
             />
           </form>
 

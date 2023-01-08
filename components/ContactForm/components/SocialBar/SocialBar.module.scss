@@ -62,17 +62,17 @@
 
   @include m.until-laptop {
     flex-direction: row-reverse;
+    justify-content: space-between;
 
     margin: 0;
     padding: 0;
     height: 0px;
-    width: 210px;
-    margin-left: auto;
-    margin-right: v.$margin-12;
-    padding-right: v.$padding-6;
+    width: 310px;
+    margin: auto;
+    padding: 0 v.$padding-16;
 
     border-top-right-radius: 0px;
-    border-bottom-right-radius: v.$border-radius-2;
+    border-bottom-right-radius: v.$border-radius-7;
     border-bottom-left-radius: v.$border-radius-7;
 
     animation: slide-to-bottom 1s 1s forwards;

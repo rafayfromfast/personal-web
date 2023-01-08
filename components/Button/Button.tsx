@@ -12,6 +12,7 @@ interface Props {
   onHover?: () => void;
   type?: ButtonTypes;
   rounded?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<Props> = ({
@@ -20,9 +21,12 @@ const Button: React.FC<Props> = ({
   type = ButtonTypes.TEXT,
   onHover,
   rounded,
+  className,
 }) => {
   console.log("title :", title);
-  const buttonClasses = classnames(styles[type], { [styles.rounded]: rounded });
+  const buttonClasses = classnames(styles[type], className, {
+    [styles.rounded]: rounded,
+  });
   return (
     <button onClick={onClick} onMouseOver={onHover} className={buttonClasses}>
       {title}
