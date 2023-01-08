@@ -2,10 +2,8 @@ import { Typography } from "antd";
 import { ButtonTypes, CustomButton } from "../../../Button";
 import { AnimateOnScroll } from "../../../AnimateOnScroll";
 import { AnimateFromDirection } from "../../../AnimateOnScroll/AnimateOnScroll";
-import TestLogo from "./TestIcon";
 
 import styles from "./Section1.module.scss";
-import AnimatedIconBar from "./AnimatedIconBar";
 import Link from "next/link";
 
 const Section1: React.FC = () => {

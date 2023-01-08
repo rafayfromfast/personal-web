@@ -1,9 +1,35 @@
 import Head from "next/head";
+import { useEffect, useRef } from "react";
 import { BannerParallax } from "../components";
 import { Section1, Section2, Section3 } from "../components/pages";
+import { useSetScrollValueContext } from "../hooks";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const setValue = useSetScrollValueContext();
+
+  useEffect(() => {
+    const servicesTop = (servicesRef.current?.offsetTop || 200) - 200;
+    const contactTop = (contactRef.current?.offsetTop || 200) - 200;
+    function handleScroll() {
+      const scrollPos = window.scrollY;
+
+      if (scrollPos > contactTop) {
+        setValue("#contact");
+      } else if (scrollPos > servicesTop) {
+        setValue("#services");
+      } else {
+        setValue("#home");
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,6 +43,7 @@ export default function Home() {
         <Section1 />
         <br />
         <br />
+        <div ref={servicesRef} />
         <Section2 />
         <br />
         <br />
@@ -24,6 +51,7 @@ export default function Home() {
         <br />
         <br />
         <br />
+        <div ref={contactRef} />
         <Section3 />
         <br />
         <br />

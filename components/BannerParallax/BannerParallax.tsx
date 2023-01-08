@@ -34,7 +34,7 @@ const BannerParallax: React.FC<Props> = ({ heading }) => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={"home"}>
       <div
         id="parallax"
         className={styles.parallax}

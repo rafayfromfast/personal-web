@@ -2,7 +2,7 @@
 
 .container {
   display: none;
-  height: 80px;
+  height: 60px;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
   width: 100%;
   padding: 0px 40px;
@@ -35,5 +35,14 @@
   .btn {
     width: 100%;
     text-align: center;
+    &:nth-child(2) {
+      border-left: 1px solid rgba(255, 255, 255, 0.501);
+      border-right: 1px solid rgba(255, 255, 255, 0.501);
+    }
   }
+}
+
+.selected {
+  transform: scale(1.2);
+  color: white;
 }

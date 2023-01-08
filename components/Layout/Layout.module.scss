@@ -11,7 +11,6 @@ $margin: -20vw;
 
   bottom: $margin;
   right: auto;
-  z-index: -1;
   width: $overlay-size;
   height: $overlay-size;
   border-radius: 1000px;
@@ -32,7 +31,6 @@ $margin: -20vw;
   top: $margin;
   right: $margin;
   bottom: auto;
-  z-index: -1;
 
   background: #fb5343;
 
@@ -102,7 +100,7 @@ $margin: -20vw;
   }
   50% {
     transform: translate(25vw, -800px);
-    background: #fb4343;
+    background: #d043fb;
     width: 20vw;
     height: 20vw;
     opacity: 0.25;

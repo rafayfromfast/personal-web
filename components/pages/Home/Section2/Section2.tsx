@@ -1,8 +1,4 @@
-import { Typography } from "antd";
-import { useEffect, useMemo, useState } from "react";
-import AnimateOnScroll, {
-  AnimateFromDirection,
-} from "../../../AnimateOnScroll/AnimateOnScroll";
+import { useEffect, useState } from "react";
 import { Container } from "../../../Container";
 import { TextSection } from "../../../TextSection";
 import { useTextSizeChange } from "./hooks";
@@ -49,6 +45,12 @@ const Section2: React.FC = () => {
         <TextSection
           title={"IoT Services"}
           description={`Our company specializes in providing comprehensive Internet of Things (IoT) services for businesses and organizations. We help our clients leverage the power of connected devices and sensors to collect and analyze data, automate processes, and improve efficiency. Our team of experts works with you to design, implement, and manage custom IoT solutions that meet your specific needs and goals. From smart buildings and manufacturing to transportation and healthcare, we have the expertise and resources to help you transform your business with IoT.`}
+        />
+      </Container>
+      <Container direction="right" index={2}>
+        <TextSection
+          title={"App Development"}
+          description={`Mobile apps and progressive web apps (PWAs) can enhance your company's reach and engagement by providing a seamless and convenient experience for your customers on their mobile devices. With a mobile app or PWA, you can easily showcase your products and services, send push notifications, and gather valuable user data to improve and grow your business. Mobile apps and PWAs are also cost-effective and can be developed and updated quickly, making them a valuable asset for your company.`}
         />
       </Container>
     </div>

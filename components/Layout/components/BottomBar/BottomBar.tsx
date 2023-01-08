@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { useScrollValueContext } from "../../../../hooks";
 import { ButtonTypes, CustomButton } from "../../../Button";
 import { NavButtons } from "../../mocks";
 import styles from "./BottomBar.module.scss";
 
 const Header: React.FC = () => {
+  const value = useScrollValueContext();
+
   return (
     <div className={styles.container}>
       <div className={styles["button-bar"]}>
@@ -14,7 +17,11 @@ const Header: React.FC = () => {
             key={idx}
             className={styles.btn}
           >
-            <CustomButton title={button.title} type={ButtonTypes.TEXT} />
+            <CustomButton
+              title={button.title}
+              type={ButtonTypes.TEXT}
+              className={value === button.link ? styles.selected : ""}
+            />
           </Link>
         ))}
       </div>
