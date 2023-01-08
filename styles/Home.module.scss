@@ -1,15 +1,12 @@
 .container {
-  padding: 0 2rem;
+  // padding: 0 2rem;
+  min-height: 300vh;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer {
@@ -115,15 +112,15 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .card,
+//   .footer {
+//     border-color: #222;
+//   }
+//   .code {
+//     background: #111;
+//   }
+//   .logo img {
+//     filter: invert(1);
+//   }
+// }

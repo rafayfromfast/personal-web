@@ -1,0 +1,120 @@
+@use "./colors.scss" as c;
+@use "./variables.scss" as v;
+
+@mixin flex(
+  $direction: row,
+  $justify-content: center,
+  $align-items: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+
+@mixin clickable {
+  transition: opacity 0.2s;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@mixin clickable {
+  transition: opacity 0.2s;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@mixin underline-animation($color: c.$white) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: -1px;
+    background-color: $color;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+// Breakpoints...
+@mixin mobile {
+  @media screen and (min-width: 0px) and (max-width: v.$max-breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: v.$min-breakpoint-sm) and (max-width: v.$max-breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin from-tablet {
+  @media screen and (min-width: v.$min-breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin tablet-larger {
+  @media screen and (min-width: v.$min-breakpoint-md) and (max-width: v.$max-breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin from-tablet-larger {
+  @media screen and (min-width: v.$min-breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: v.$min-breakpoint-lg) and (max-width: v.$max-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin from-laptop {
+  @media screen and (min-width: v.$min-breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin until-laptop {
+  @media screen and (max-width: v.$max-breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin laptop-larger {
+  @media screen and (min-width: v.$min-breakpoint-xl) and (max-width: v.$max-breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin from-laptop-larger {
+  @media screen and (min-width: v.$min-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin larger-screens {
+  @media screen and (min-width: v.$min-breakpoint-xxl) {
+    @content;
+  }
+}

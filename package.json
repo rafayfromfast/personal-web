@@ -4,19 +4,32 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build & next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
     "@types/node": "18.11.11",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
+    "antd": "^5.0.4",
+    "classnames": "^2.3.2",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",
+    "particlesjs": "^2.2.3",
     "react": "18.2.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+    "react-hook-form": "^7.41.5",
+    "react-responsive": "^9.0.2",
+    "sass": "^1.56.1",
+    "typescript": "4.9.3",
+    "typewriter-effect": "^2.19.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/react-animate-on-scroll": "^2.1.5"
   }
 }

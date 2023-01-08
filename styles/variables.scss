@@ -1,0 +1,139 @@
+$poppins: "Poppins", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+// LAYOUT DESKTOP VARIABLES
+$header-height: 132px;
+$sidebar-width: 50px;
+$lateral-padding: 15%;
+
+// LAYOUT TABLET VARIABLES
+$header-tablet-height: 140px;
+$sidebar-tablet-width: 50px;
+$lateral-tablet-padding: 10%;
+
+// LAYOUT PHONE VARIABLES
+$header-phone-height: 100px;
+$sidebar-phone-width: 50px;
+$lateral-phone-padding: 5%;
+
+// MIN-WIDTH BREAKPOINTS
+//to be used on @media(min-width:<<breakpoint>>){}
+$min-breakpoint-xs: 0;
+$min-breakpoint-sm: 576px;
+$min-breakpoint-md: 768px;
+$min-breakpoint-lg: 992px;
+$min-breakpoint-xl: 1200px;
+$min-breakpoint-xxl: 1600px;
+
+// MAX-WIDTH BREAKPOINTS
+//to be used on @media(max-width:<<breakpoint>>){}
+$max-breakpoint-xs: 0;
+$max-breakpoint-sm: 575px;
+$max-breakpoint-md: 767px;
+$max-breakpoint-lg: 991px;
+$max-breakpoint-xl: 1199px;
+$max-breakpoint-xxl: 1599px;
+
+// BORDERS
+$border-radius-1: 5px;
+$border-radius-2: 10px;
+$border-radius-3: 15px;
+$border-radius-4: 20px;
+$border-radius-5: 30px;
+$border-radius-6: 45px;
+$border-radius-7: 70px;
+$border-radius-full: 9999px;
+
+// FONTS
+$font-size-xxs: 9px;
+$font-size-xs: 12px;
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 27px;
+$font-size-xxxl: 30px;
+$font-size-xxxxl: 35px;
+$font-size-xxxxxl: 45px;
+$font-size-6xl: 65px;
+$font-size-7xl: 75px;
+$font-size-8xl: 80px;
+$font-size-9xl: 100px;
+$font-size-200px: 200px;
+
+//PADDING
+$padding-1: 5px;
+$padding-2: 8px;
+$padding-3: 10px;
+$padding-4: 12px;
+$padding-5: 15px;
+$padding-6: 18px;
+$padding-7: 20px;
+$padding-8: 22px;
+$padding-9: 25px;
+$padding-10: 30px;
+$padding-11: 35px;
+$padding-12: 40px;
+$padding-13: 45px;
+$padding-14: 50px;
+$padding-15: 55px;
+$padding-16: 60px;
+$padding-17: 65px;
+$padding-18: 120px;
+
+//MARGIN
+$margin-1: 5px;
+$margin-2: 8px;
+$margin-3: 10px;
+$margin-4: 15px;
+$margin-5: 20px;
+$margin-6: 25px;
+$margin-7: 30px;
+$margin-8: 35px;
+$margin-9: 40px;
+$margin-10: 45px;
+$margin-11: 50px;
+$margin-12: 55px;
+$margin-13: 60px;
+$margin-14: 65px;
+$margin-15: 70px;
+$margin-16: 75px;
+$margin-17: 80px;
+$margin-18: 85px;
+$margin-19: 90px;
+$margin-20: 95px;
+$margin-21: 100px;
+
+//Fonts
+$anton-font: "Anton", sans-serif;
+
+//TRANSITION
+
+@mixin transition-opacity {
+  transition: opacity 100ms ease-in;
+}
+
+@mixin transition-colors {
+  transition: 150ms ease-in;
+  transition-property: color, background-color;
+}
+
+@mixin transition-all {
+  transition: all 100ms ease-in;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@mixin animation-loading {
+  animation: loading 1s infinite;
+}

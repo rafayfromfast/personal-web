@@ -1,0 +1,53 @@
+%button-common {
+  color: #acacac;
+  font-size: 16px;
+  background: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  transition: all 0.7s;
+  border: 1px solid transparent;
+
+  padding: 15px 20px;
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+%btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #e55d87 0%,
+    #5fc3e4 51%,
+    #e55d87 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  &:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.contained {
+  @extend %button-common;
+  @extend %btn-grad;
+}
+
+.text {
+  @extend %button-common;
+}
+
+.rounded {
+  border-radius: 40px;
+}

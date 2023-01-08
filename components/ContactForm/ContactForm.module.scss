@@ -1,0 +1,120 @@
+@use "styles/colors.scss" as c;
+@use "styles/mixins.scss" as m;
+@use "styles/variables.scss" as v;
+
+.container {
+  @include m.flex(column);
+  gap: 50px;
+}
+
+.inner-container {
+  width: 100%;
+  @include m.flex(row, flex-start);
+
+  @include m.until-laptop {
+    flex-direction: column;
+    height: calc(700px + 62px);
+  }
+}
+
+.form-container {
+  z-index: 1;
+  height: 565px;
+  width: calc(100% - 62px); //width of social bar is subtracted
+  box-sizing: border-box;
+  padding: v.$padding-12 v.$padding-14;
+
+  background: c.$opaque-white;
+  box-shadow: 0px 20px 30px c.$opaque-blue;
+  border-radius: v.$border-radius-4;
+
+  @include m.flex(row, center, flex-start);
+  gap: 80px;
+
+  @include m.until-laptop {
+    width: 100%;
+    height: 650px;
+    gap: 25px;
+    flex-direction: column-reverse;
+    padding: v.$padding-10 v.$padding-6;
+  }
+}
+
+.form {
+  width: 50%;
+  transition: opacity 2s 1s ease-in;
+
+  .btn {
+    height: 62px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    font-size: v.$font-size-lg;
+    text-transform: capitalize;
+    border-radius: v.$border-radius-4;
+  }
+
+  @include m.until-laptop {
+    width: 100%;
+
+    .btn {
+      width: 50% !important;
+      margin: auto;
+      min-width: 200px;
+    }
+  }
+}
+
+.content {
+  height: 100%;
+  transition: opacity 2s 1s ease-in;
+
+  @include m.flex(column, space-between, flex-start);
+
+  @include m.until-laptop {
+    width: 100%;
+    align-items: center;
+  }
+
+  .upper {
+    @include m.flex(column, flex-start, flex-start);
+    gap: 40px;
+
+    @include m.until-laptop {
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      color: c.$white;
+      font-weight: bold;
+      font-size: v.$font-size-xxxxxl;
+
+      line-height: 50px;
+      width: fit-content;
+      letter-spacing: 0.08em;
+
+      @include m.until-laptop {
+        text-align: center;
+        font-size: v.$font-size-xxxl;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      color: c.$white;
+      font-weight: 400;
+      font-size: v.$font-size-xl;
+
+      line-height: 40px;
+      width: fit-content;
+      letter-spacing: 0.08em;
+
+      @include m.until-laptop {
+        text-align: center;
+        font-size: v.$font-size-sm;
+        line-height: v.$font-size-lg;
+      }
+    }
+  }
+}

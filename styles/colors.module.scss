@@ -1,0 +1,30 @@
+/*
+ * This file exports scss variables as a module
+ * which allows for it to be imported in 
+ * JS/TS files.
+ * 
+ * Mainly used for React components.
+ * 
+ * 
+ * 
+ * Usage:
+ * 
+ * Inside .jsx/tsx file:
+ * import colors from "styles/colors.module.scss";
+ * ...
+ * ...
+ * const primary = colors["primary"];
+ * ...
+ */
+
+@use "./colors.scss" as colors;
+
+:export {
+  blue: colors.$blue;
+  purple: colors.$purple;
+  red: colors.$red;
+  green: colors.$green;
+  blue: colors.$blue;
+  yellow2: colors.$yellow;
+  teal: colors.$teal;
+}

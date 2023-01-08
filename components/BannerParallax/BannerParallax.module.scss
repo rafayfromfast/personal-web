@@ -1,0 +1,113 @@
+.container {
+  width: 100vw;
+
+  height: calc(100vh - 80px);
+  min-height: 500px;
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: calc(100vh - 0px);
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png),
+    url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png),
+    url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+$animation_time: 3s;
+$delay_time: 1s;
+
+%from-up {
+  animation: $animation_time slide-animation $delay_time forwards;
+  transform: translateY(-100vh);
+}
+%from-down {
+  animation: $animation_time slide-animation $delay_time forwards;
+
+  transform: translateY(100vh);
+}
+%from-left {
+  animation: $animation_time slide-animation $delay_time forwards;
+
+  transform: translateX(-100vw);
+}
+%from-right {
+  animation: $animation_time slide-animation $delay_time forwards;
+
+  transform: translateX(100vw);
+}
+
+@keyframes slide-animation {
+  to {
+    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+%common-heading {
+  font-size: 42px;
+  letter-spacing: 2px;
+  font-family: monospace;
+  opacity: 0;
+
+  z-index: 2;
+  margin: 0;
+}
+
+%main-heading-common {
+  @extend %common-heading;
+
+  font-family: cursive;
+
+  font-size: 80px;
+  background: linear-gradient(
+      95deg,
+      #059dff 15%,
+      #6549d5 45%,
+      #e33fa1 75%,
+      #fb5343
+    )
+    95%/200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-heading {
+  display: flex;
+  &__first {
+    @extend %main-heading-common;
+    @extend %from-left;
+  }
+  &__second {
+    @extend %main-heading-common;
+    @extend %from-right;
+  }
+}
+
+.heading {
+  &__top {
+    @extend %common-heading;
+    @extend %from-up;
+  }
+  &__bottom {
+    @extend %common-heading;
+    @extend %from-down;
+  }
+}

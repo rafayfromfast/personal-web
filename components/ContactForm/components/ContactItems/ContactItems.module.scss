@@ -1,0 +1,14 @@
+@use "styles/mixins.scss" as m;
+
+.container {
+  gap: 40px;
+  width: 70%;
+  z-index: 1;
+
+  @include m.flex(column, space-between, flex-start);
+
+  @include m.until-laptop {
+    max-width: 80%;
+    width: fit-content;
+  }
+}

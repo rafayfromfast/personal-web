@@ -1,0 +1,52 @@
+@use "styles/variables.scss" as v;
+@use "styles/colors.scss" as c;
+@use "styles/mixins.scss" as m;
+
+%common {
+  height: 60px;
+  width: 100%;
+  border-radius: v.$border-radius-4;
+
+  font-size: v.$font-size-sm;
+  background: white;
+  font-family: v.$poppins;
+  color: c.$black !important;
+
+  outline: none;
+  border: none;
+
+  padding: v.$padding-9;
+  box-sizing: border-box;
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+}
+
+.text-field {
+  @extend %common;
+  height: 60px;
+}
+
+.text-area {
+  @extend %common;
+  height: 200px;
+  resize: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.error {
+  min-height: 27px;
+  line-height: 1.5;
+  color: c.$primary-dark;
+  font-size: v.$font-size-md;
+
+  margin-top: v.$margin-1;
+  margin-left: v.$margin-6;
+}

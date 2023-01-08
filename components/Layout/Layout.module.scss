@@ -1,0 +1,120 @@
+.container {
+  height: fit-content;
+}
+
+$overlay-size: 40vw;
+$margin: -20vw;
+
+.overlay-left {
+  position: fixed;
+  left: $margin;
+
+  bottom: $margin;
+  right: auto;
+  z-index: -1;
+  width: $overlay-size;
+  height: $overlay-size;
+  border-radius: 1000px;
+  background: #059dff;
+
+  opacity: 0.25;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  animation: animate-left 10s infinite;
+}
+
+.overlay-right {
+  position: fixed;
+  width: $overlay-size;
+  height: $overlay-size;
+  border-radius: 1000px;
+  left: auto;
+  top: $margin;
+  right: $margin;
+  bottom: auto;
+  z-index: -1;
+
+  background: #fb5343;
+
+  opacity: 0.25;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+
+  animation: animate-right 10s infinite;
+}
+
+.overlay {
+  // background: rgb(19, 6, 241);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(31, 217, 65);
+  background: linear-gradient(
+      90deg,
+      #034067 51%,
+      #18017508 76%,
+      #62023b05 75%,
+      #650b02
+    )
+    95%/200% 100%;
+}
+
+@keyframes animate-right {
+  0% {
+  }
+  25% {
+    transform: translate(-50vw, 500px);
+    background: #43fb65;
+    width: 20vw;
+    height: 20vw;
+  }
+  45% {
+  }
+  50% {
+    transform: translate(-25vw, 800px);
+    background: #fbe543;
+    width: 20vw;
+    height: 20vw;
+    opacity: 0.15;
+    -webkit-filter: blur(70px);
+    filter: blur(70px);
+  }
+  75% {
+    transform: translate(-25vw, 50vh);
+    background: #fbe543;
+    width: 30vw;
+    height: 30vw;
+  }
+  100% {
+  }
+}
+
+@keyframes animate-left {
+  0% {
+  }
+  25% {
+    transform: translate(50vw, -500px);
+    background: #43effb;
+    width: 20vw;
+    height: 20vw;
+  }
+  45% {
+  }
+  50% {
+    transform: translate(25vw, -800px);
+    background: #fb4343;
+    width: 20vw;
+    height: 20vw;
+    opacity: 0.25;
+    -webkit-filter: blur(70px);
+    filter: blur(70px);
+  }
+  75% {
+    transform: translate(25vw, -50vh);
+    background: #ef43fb;
+    width: 30vw;
+    height: 30vw;
+  }
+  100% {
+  }
+}

@@ -1,0 +1,13 @@
+@use "styles/colors.scss" as c;
+@use "styles/mixins.scss" as m;
+@use "styles/variables.scss" as v;
+
+.container {
+  min-width: 35px;
+  height: 35px;
+
+  border: 1px solid;
+  border-radius: v.$border-radius-full;
+
+  @include m.flex();
+}
