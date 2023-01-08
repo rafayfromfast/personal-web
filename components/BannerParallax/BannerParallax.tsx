@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MouseEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./BannerParallax.module.scss";
 import { BrokenHeading } from "./components";
 
