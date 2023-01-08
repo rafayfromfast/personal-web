@@ -4,7 +4,6 @@ import { InputField, InputFieldVariants } from "../InputField";
 
 import { useContactForm } from "./hooks";
 import { ContactItems, SocialBar } from "./components";
-import { FromLaptop, UntilLaptop } from "../../styles/media";
 
 import styles from "./ContactForm.module.scss";
 import { ButtonTypes, CustomButton } from "../Button";

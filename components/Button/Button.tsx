@@ -23,7 +23,6 @@ const Button: React.FC<Props> = ({
   rounded,
   className,
 }) => {
-  console.log("title :", title);
   const buttonClasses = classnames(styles[type], className, {
     [styles.rounded]: rounded,
   });

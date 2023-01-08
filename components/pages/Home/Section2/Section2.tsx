@@ -11,7 +11,6 @@ import styles from "./Section2.module.scss";
 const Section2: React.FC = () => {
   const { size } = useTextSizeChange(20, 90);
   const [fontSize, setFontSize] = useState(size);
-  console.log("fontSize :", fontSize);
 
   useEffect(() => {
     setFontSize(size);

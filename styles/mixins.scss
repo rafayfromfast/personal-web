@@ -14,22 +14,6 @@
   flex-wrap: $wrap;
 }
 
-@mixin clickable {
-  transition: opacity 0.2s;
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-@mixin clickable {
-  transition: opacity 0.2s;
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
 @mixin underline-animation($color: c.$white) {
   position: relative;
 

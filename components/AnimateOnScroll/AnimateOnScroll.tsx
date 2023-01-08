@@ -34,7 +34,6 @@ const AnimateOnScroll: React.FC<Props> = ({
             myElement.current.classList?.add(
               hideShow ? styles.show : styles[`fade-in-text-${direction}`]
             );
-          console.log("in view");
         }
       });
     });
