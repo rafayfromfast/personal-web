@@ -20,7 +20,6 @@
     "next": "13.0.6",
     "particlesjs": "^2.2.3",
     "react": "18.2.0",
-    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.41.5",
     "react-responsive": "^9.0.2",
@@ -28,8 +27,5 @@
     "typescript": "4.9.3",
     "typewriter-effect": "^2.19.0",
     "yup": "^0.32.11"
-  },
-  "devDependencies": {
-    "@types/react-animate-on-scroll": "^2.1.5"
   }
 }
