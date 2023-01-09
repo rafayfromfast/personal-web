@@ -7,3 +7,5 @@ export * from "./Container";
 export * from "./TextSection";
 export * from "./ContactForm";
 export * from "./ContextProviders";
+export * from "./AnimatedLogo";
+export * from "./Footer";

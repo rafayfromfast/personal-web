@@ -1,4 +1,5 @@
 import { ScrollValueContextProvider } from "../ContextProviders";
+import { Footer } from "../Footer";
 import { BottomBar } from "./components/BottomBar";
 import { Header } from "./components/Header";
 import styles from "./Layout.module.scss";
@@ -16,6 +17,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <Header />
         <BottomBar />
         {children}
+        <Footer />
       </div>
     </ScrollValueContextProvider>
   );

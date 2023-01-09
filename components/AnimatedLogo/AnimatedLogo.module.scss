@@ -1,0 +1,66 @@
+@use "styles/colors.scss" as c;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .upper {
+      transform: translateY(50%);
+    }
+    .lower {
+      transform: translateY(-50%);
+    }
+
+    .inner {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+%title {
+  font-size: 34px !important;
+  color: white;
+  transition: 0.5s;
+  margin: 0;
+  height: fit-content;
+  letter-spacing: 4px;
+
+  background-image: linear-gradient(180deg, c.$white 0%, c.$teal 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.upper {
+  @extend %title;
+
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  transform: translateY(67%);
+  color: c.$white;
+}
+
+.lower {
+  @extend %title;
+
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  transform: translateY(-67%);
+  color: c.$teal;
+}
+
+.inner {
+  font-size: 12px !important;
+  margin: 0;
+  opacity: 0;
+  transition: 0.5s;
+  transform: scale(0.5);
+  margin-right: 4px;
+  letter-spacing: 2px;
+
+  font-size: 200 !important;
+}
+
+@keyframes show {
+}

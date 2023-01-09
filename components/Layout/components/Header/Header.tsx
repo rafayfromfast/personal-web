@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useLocalStorage, useScrollValueContext } from "../../../../hooks";
+import { AnimatedLogo } from "../../../AnimatedLogo";
 import { ButtonTypes, CustomButton } from "../../../Button";
 import { NavButtons } from "../../mocks";
 import styles from "./Header.module.scss";
@@ -10,9 +11,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles["title-container"]}>
-        <h1 className={styles.title}>SMK</h1>
-
-        <h2 className={styles["sub-title"]}>Technologies</h2>
+        <AnimatedLogo title="SMK" innerText="Technologies" />
       </div>
 
       <div className={styles["button-bar"]}>

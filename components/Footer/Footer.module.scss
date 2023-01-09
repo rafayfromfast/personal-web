@@ -1,0 +1,74 @@
+@use "styles/mixins.scss" as m;
+
+.container {
+  background: black;
+  z-index: 4;
+  position: relative;
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+  box-shadow: 10px 10px 20px black;
+
+  @include m.mobile {
+    flex-direction: column-reverse;
+    display: flex;
+    row-gap: 40px;
+    padding-bottom: 50px;
+  }
+
+  @include m.from-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 25px;
+    padding-bottom: 50px;
+  }
+
+  @include m.from-laptop {
+    display: flex;
+    padding: 100px;
+  }
+}
+
+.buttons {
+  justify-content: space-between;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 10px;
+
+  @include m.mobile {
+    align-items: center;
+  }
+
+  .btn {
+    height: fit-content;
+    &:hover {
+      transform: scale(1.2);
+      color: white;
+    }
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .socials {
+    display: flex;
+    gap: 30px;
+
+    .item {
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
