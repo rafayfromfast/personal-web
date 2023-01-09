@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useLocalStorage, useScrollValueContext } from "../../../../hooks";
+import { useScrollValueContext } from "../../../../hooks";
 import { AnimatedLogo } from "../../../AnimatedLogo";
 import { ButtonTypes, CustomButton } from "../../../Button";
 import { NavButtons } from "../../mocks";
