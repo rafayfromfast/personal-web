@@ -21,7 +21,7 @@
   }
 }
 %title {
-  font-size: 34px !important;
+  font-size: 34px;
   color: white;
   transition: 0.5s;
   margin: 0;
@@ -34,10 +34,29 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bigger {
+  .upper {
+    font-size: 50px !important;
+    transform: translateY(60%);
+  }
+  .lower {
+    font-size: 50px !important;
+    transform: translateY(-60%);
+  }
+  &:hover {
+    .upper {
+      transform: translateY(47%);
+    }
+    .lower {
+      transform: translateY(-47%);
+    }
+  }
+}
+
 .upper {
   @extend %title;
 
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 48%, 0 48%);
   transform: translateY(67%);
   color: c.$white;
 }
@@ -45,7 +64,7 @@
 .lower {
   @extend %title;
 
-  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 54%, 100% 54%, 100% 100%, 0 100%);
   transform: translateY(-67%);
   color: c.$teal;
 }

@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { Location2, Mail, Phone } from "../../icons";
 import { AnimatedLogo } from "../AnimatedLogo";
-import { ButtonTypes, CustomButton } from "../Button";
 import { ContactIcon } from "../ContactForm/components";
 import { ContactItem } from "../ContactItem";
-import { NavButtons } from "../Layout/mocks";
 import styles from "./Footer.module.scss";
 import colors from "styles/colors.module.scss";
 import { socials } from "../ContactForm/components/SocialBar/mocks";
@@ -35,7 +33,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className={styles["logo-container"]}>
-        <AnimatedLogo title={"SMK"} innerText={"Technologies"} />
+        <AnimatedLogo title={"SMK"} innerText={"Technologies"} bigger />
         <div className={styles.socials}>
           {socials.map(({ link, icon }, idx) => (
             <span className={styles.item} key={idx}>
