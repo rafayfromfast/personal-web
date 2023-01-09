@@ -1,5 +1,7 @@
 .container {
   height: fit-content;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 $overlay-size: 40vw;
