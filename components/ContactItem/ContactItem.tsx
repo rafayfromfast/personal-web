@@ -10,7 +10,7 @@ const ContactItem: React.FC<IContactItemProps> = ({ icon, content, link }) => {
     [styles.link]: link,
   });
   return (
-    <Link href={link || ""} target="_blank">
+    <Link href={link || "#"} target="_blank">
       <div className={containerClasses}>
         {icon}
         <p className={styles.content}>{content}</p>
