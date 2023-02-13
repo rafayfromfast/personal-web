@@ -17,6 +17,21 @@ const Section1: React.FC = () => {
         <Typography.Title level={4} className={styles.text}>
           {`A Full Stack Engineer with around 4 years of experience in cuttin edge technologies.`}
           {`This is just a showcase of my frontend skills. To see the code of this project you can `}
+          <Link href={"https://github.com/rafayfromfast/personal-web"}>
+            visit here.
+          </Link>
+          <br />
+          {`If you want to see my experiences, you can get my `}
+          <strong>
+            {" "}
+            <Link
+              href={
+                "https://drive.google.com/file/d/1x3_WmPT6WfGnS5lMvvhMeQgfRDDO68Au/view?usp=sharing"
+              }
+            >
+              resume here
+            </Link>
+          </strong>
         </Typography.Title>
       </AnimateOnScroll>
 
