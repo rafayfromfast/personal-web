@@ -17,7 +17,10 @@ const Section1: React.FC = () => {
         <Typography.Title level={4} className={styles.text}>
           {`A Full Stack Engineer with around 4 years of experience in cuttin edge technologies.`}
           {`This is just a showcase of my frontend skills. To see the code of this project you can `}
-          <Link href={"https://github.com/rafayfromfast/personal-web"}>
+          <Link
+            href={"https://github.com/rafayfromfast/personal-web"}
+            target={"_blank"}
+          >
             visit here.
           </Link>
           <br />
@@ -28,6 +31,7 @@ const Section1: React.FC = () => {
               href={
                 "https://drive.google.com/file/d/1x3_WmPT6WfGnS5lMvvhMeQgfRDDO68Au/view?usp=sharing"
               }
+              target={"_blank"}
             >
               resume here
             </Link>
