@@ -3,9 +3,9 @@ import { notification } from "antd";
 
 export const useEmail = () => {
   const sendEmail = (data: any) => {
-    notification.error({
+    notification.info({
       message:
-        "Can't send the message now. You can email me directly through the link in the end of page.",
+        "You can also email me directly. Check the end of page for email.",
     });
     const templateParams = {
       from_name: data.name,
