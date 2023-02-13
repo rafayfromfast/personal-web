@@ -41,9 +41,9 @@ const BannerParallax: React.FC<Props> = ({ heading }) => {
         onMouseMove={(e) => parallax(e)}
       >
         <div className={styles["heading-container"]}>
-          <h1 className={styles.heading__top}>WE ACHIEVE</h1>
-          <BrokenHeading text="BREAKTHROUGHS" />
-          <h1 className={styles.heading__bottom}>FOR YOU!</h1>
+          <h1 className={styles.heading__top}>I AM A</h1>
+          <BrokenHeading text={heading} />
+          <h1 className={styles.heading__bottom}>Engineer!</h1>
         </div>
       </div>
     </div>

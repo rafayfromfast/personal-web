@@ -10,7 +10,6 @@ export function useLocalStorage<T>(key: string, fallbackValue: T) {
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
-  console.log("value :", value);
 
   return [value, setValue] as const;
 }

@@ -3,11 +3,17 @@ import { notification } from "antd";
 
 export const useEmail = () => {
   const sendEmail = (data: any) => {
+    notification.error({
+      message:
+        "Can't send the message now. You can email me directly through the link in the end of page.",
+    });
     const templateParams = {
       from_name: data.name,
       message: data.description,
       reply_to: data.email,
     };
+
+    // Yes I know the following should be in .env.
     emailjs
       .send(
         "service_kfpkgh6",
@@ -20,7 +26,10 @@ export const useEmail = () => {
           notification.success({ message: "Mail successfully sent" });
         },
         function (error) {
-          console.log("FAILED...", error);
+          notification.error({
+            message:
+              "Can't send the message now. You can email me directly through the link in the end of page.",
+          });
         }
       );
   };

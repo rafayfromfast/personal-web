@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles["title-container"]}>
-        <AnimatedLogo title="SMK" innerText="Technologies" />
+        <AnimatedLogo title="RAFAY" innerText="ABBAS" />
       </div>
 
       <div className={styles["button-bar"]}>

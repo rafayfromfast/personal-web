@@ -1,3 +1,4 @@
+import { notification } from "antd";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 import { BannerParallax } from "../components";
@@ -24,6 +25,13 @@ export default function Home() {
     }
 
     window.addEventListener("scroll", handleScroll);
+
+    notification.info({
+      message: "Features",
+      duration: 20,
+      description: `Hover on the logo on header. Move around mouse on banner, and scroll through the website to checkout skills and contact form.`,
+    });
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,22 +41,22 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>S M K</title>
+        <title>Rafay Abbas</title>
         <meta
           name="keywords"
-          content="IT services, web development, software services, software development,IoT solutions, Cloud Solutions, IT support"
+          content="Fullstack Engineer, Fullstack Developer, MERN Developer, MERN Stack, Frontend Engineer, React, React Developer"
         />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="SMK Technologies (SMC) Pvt. Ltd" />
+        <meta name="author" content="Rafay Abbas" />
         <meta
           name="description"
-          content="We offer a wide range of IT services, including web development, mobile app developement, IoT solutions and custom software development. Contact us for more information."
+          content="I am Fullstack Engineer, working on MERN stack, having vast and diverse industry experience."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main className={styles.main}>
-        <BannerParallax heading="We achieve Breakthroughs for you" />
+        <BannerParallax heading="FULLSTACK" />
         <Section1 />
         <br />
         <br />

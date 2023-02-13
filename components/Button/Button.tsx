@@ -7,6 +7,7 @@ export enum ButtonTypes {
 }
 
 interface Props {
+  ///***------+ */
   title: string;
   onClick?: () => void;
   onHover?: () => void;

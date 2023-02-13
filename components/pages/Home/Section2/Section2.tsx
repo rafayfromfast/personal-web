@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Container } from "../../../Container";
+import { Technologies } from "../../../Technologies";
 import { TextSection } from "../../../TextSection";
 import { useTextSizeChange } from "./hooks";
 import styles from "./Section2.module.scss";
 
 const Section2: React.FC = () => {
-  const { size } = useTextSizeChange(20, 90);
+  const { size } = useTextSizeChange(45, 110);
   const [fontSize, setFontSize] = useState(size);
 
   useEffect(() => {
@@ -15,42 +16,46 @@ const Section2: React.FC = () => {
   return (
     <div className={styles.container} id={"services"}>
       <h1 className={styles.title} style={{ fontSize: fontSize }}>
-        Offered Services
+        My Skills
       </h1>
 
       <Container direction="left">
         <TextSection
-          title={"Web Development"}
-          description={`Looking to build a professional, user-friendly website? Our team of
-          experienced web developers can help bring your vision to life. 
-
-          From custom website design and layout to advanced features and
-          functionality, we have the skills and expertise to deliver a website
-          that meets your unique needs and goals. We also offer ongoing
-          maintenance and support to ensure your site stays up-to-date and
-          running smoothly. Contact us to learn more about how our web
-          development services can help your business succeed online.`}
+          title={"Frontend Technologies"}
+          description={`I have been working on REACT, NEXT,Tailwind, Redux, SASS, Storybooks, HTML5, CSS3, MUI, AntD and 
+          some experience in Babylon. I am expert in transforming Figma (or whatever you use) designs into high-performant, elegant looking designs. 
+          I have worked on complex UIs and have a command on mobile first designs for better responsiveness`}
         />
       </Container>
 
       <Container direction="right">
         <TextSection
-          title={"Machine Learning"}
+          title={"Backend Stack"}
           description={`
-        Our company specializes in providing professional machine learning services to help businesses and organizations harness the power of artificial intelligence and data analysis. Our team of expert data scientists and engineers can help you build and implement custom machine learning models that can improve your operations, increase efficiency, and drive growth. From predicting customer behavior and optimizing supply chain management to improving fraud detection and enhancing image and voice recognition, we can provide the expertise and technology you need to get the most out of your data. Contact us to learn more about how our machine learning services can benefit your organization.`}
+        I have experience on NodeJS, NestJS, Express, GraphQL and if we talk about ORMs I have worked with Mongoose, TypeORM, Sequelize and Prisma. 
+        I have worked on projects requiring low-latency architecture along-with handling sensitive data. 
+        I have also developed micro-services in few projects and love them for their efficiency. As a side hustle, I am learning about
+        blockchain and Web3 technologies, and have learned the Solidity for making smart contracts.`}
         />
       </Container>
 
       <Container direction="left" index={2}>
         <TextSection
-          title={"IoT Services"}
-          description={`Our company specializes in providing comprehensive Internet of Things (IoT) services for businesses and organizations. We help our clients leverage the power of connected devices and sensors to collect and analyze data, automate processes, and improve efficiency. Our team of experts works with you to design, implement, and manage custom IoT solutions that meet your specific needs and goals. From smart buildings and manufacturing to transportation and healthcare, we have the expertise and resources to help you transform your business with IoT.`}
+          title={"Databases"}
+          description={`As you know the Databases are backbone of an application, and I have experience in working with 
+          MySQL, PostgreSQL and MongoDB for the major part of my career. I know about the use cases of these
+          and I am able to differentiate between the pros and cons. Moreover I have participated in designing the architecture
+          and also optimizing the existing ones, through adding or in some cases removing the Indexes, changing the structure 
+          because of change in requirements and according to data loads needed and ofc DB Caching. I have also worked on load balancing
+          and DB partitioning in regards of making it scalable and highle available.`}
         />
       </Container>
       <Container direction="right" index={2}>
         <TextSection
-          title={"App Development"}
-          description={`Mobile apps and progressive web apps (PWAs) can enhance your company's reach and engagement by providing a seamless and convenient experience for your customers on their mobile devices. With a mobile app or PWA, you can easily showcase your products and services, send push notifications, and gather valuable user data to improve and grow your business. Mobile apps and PWAs are also cost-effective and can be developed and updated quickly, making them a valuable asset for your company.`}
+          title={"Related Skills"}
+          description={`Apart from all the skills mentioned above, I have worked a little on Devops where required, using Nginx and load balancing. 
+          I am also a great Team Player, can work synchronously or asynchronously, whatever is required. I have lead the projects , mentoring juniors and 
+          communicating with stake holders. I have also no hesitation in learning new technologies.`}
         />
       </Container>
     </div>
