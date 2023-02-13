@@ -1,9 +1,12 @@
-import { notification } from "antd";
 import Head from "next/head";
+import { notification } from "antd";
 import { useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
+
 import { BannerParallax } from "../components";
-import { Section1, Section2, Section3 } from "../components/pages";
 import { useSetScrollValueContext } from "../hooks";
+import { Section1, Section2, Section3 } from "../components/pages";
+
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -76,6 +79,7 @@ export default function Home() {
         <br />
         <br />
         <br />
+        <Analytics />
       </main>
     </div>
   );

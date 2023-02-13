@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Container } from "../../../Container";
-import { Technologies } from "../../../Technologies";
-import { TextSection } from "../../../TextSection";
+
 import { useTextSizeChange } from "./hooks";
+import { Container } from "../../../Container";
+import { TextSection } from "../../../TextSection";
+
 import styles from "./Section2.module.scss";
 
 const Section2: React.FC = () => {
