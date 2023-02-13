@@ -31,7 +31,7 @@ export default function Home() {
       duration: 20,
       description: `Hover on the logo on header. Move around mouse on banner, and scroll through the website to checkout skills and contact form.`,
     });
-
+    console.log("No warnings and errors here.So, hire me?");
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
